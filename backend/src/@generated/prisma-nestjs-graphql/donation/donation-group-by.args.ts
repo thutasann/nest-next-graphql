@@ -14,37 +14,38 @@ import { DonationMaxAggregateInput } from './donation-max-aggregate.input';
 
 @ArgsType()
 export class DonationGroupByArgs {
-  @Field(() => DonationWhereInput, { nullable: true })
-  @Type(() => DonationWhereInput)
-  where?: DonationWhereInput;
 
-  @Field(() => [DonationOrderByWithAggregationInput], { nullable: true })
-  orderBy?: Array<DonationOrderByWithAggregationInput>;
+    @Field(() => DonationWhereInput, {nullable:true})
+    @Type(() => DonationWhereInput)
+    where?: DonationWhereInput;
 
-  @Field(() => [DonationScalarFieldEnum], { nullable: false })
-  by!: Array<keyof typeof DonationScalarFieldEnum>;
+    @Field(() => [DonationOrderByWithAggregationInput], {nullable:true})
+    orderBy?: Array<DonationOrderByWithAggregationInput>;
 
-  @Field(() => DonationScalarWhereWithAggregatesInput, { nullable: true })
-  having?: DonationScalarWhereWithAggregatesInput;
+    @Field(() => [DonationScalarFieldEnum], {nullable:false})
+    by!: Array<keyof typeof DonationScalarFieldEnum>;
 
-  @Field(() => Int, { nullable: true })
-  take?: number;
+    @Field(() => DonationScalarWhereWithAggregatesInput, {nullable:true})
+    having?: DonationScalarWhereWithAggregatesInput;
 
-  @Field(() => Int, { nullable: true })
-  skip?: number;
+    @Field(() => Int, {nullable:true})
+    take?: number;
 
-  @Field(() => DonationCountAggregateInput, { nullable: true })
-  _count?: DonationCountAggregateInput;
+    @Field(() => Int, {nullable:true})
+    skip?: number;
 
-  @Field(() => DonationAvgAggregateInput, { nullable: true })
-  _avg?: DonationAvgAggregateInput;
+    @Field(() => DonationCountAggregateInput, {nullable:true})
+    _count?: DonationCountAggregateInput;
 
-  @Field(() => DonationSumAggregateInput, { nullable: true })
-  _sum?: DonationSumAggregateInput;
+    @Field(() => DonationAvgAggregateInput, {nullable:true})
+    _avg?: DonationAvgAggregateInput;
 
-  @Field(() => DonationMinAggregateInput, { nullable: true })
-  _min?: DonationMinAggregateInput;
+    @Field(() => DonationSumAggregateInput, {nullable:true})
+    _sum?: DonationSumAggregateInput;
 
-  @Field(() => DonationMaxAggregateInput, { nullable: true })
-  _max?: DonationMaxAggregateInput;
+    @Field(() => DonationMinAggregateInput, {nullable:true})
+    _min?: DonationMinAggregateInput;
+
+    @Field(() => DonationMaxAggregateInput, {nullable:true})
+    _max?: DonationMaxAggregateInput;
 }

@@ -5,29 +5,30 @@ import * as Validator from 'class-validator';
 
 @InputType()
 export class DonationCreateManyInput {
-  @Field(() => String, { nullable: true })
-  id?: string;
 
-  @Field(() => Int, { nullable: false })
-  count!: number;
+    @Field(() => String, {nullable:true})
+    id?: string;
 
-  @Field(() => Date, { nullable: true })
-  createdAt?: Date | string;
+    @Field(() => Int, {nullable:false})
+    count!: number;
 
-  @Field(() => String, { nullable: false })
-  @Validator.MinLength(4)
-  displayName!: string;
+    @Field(() => Date, {nullable:true})
+    createdAt?: Date | string;
 
-  @Field(() => String, { nullable: false })
-  @Validator.IsEmail()
-  email!: string;
+    @Field(() => String, {nullable:false})
+    @Validator.MinLength(4)
+    displayName!: string;
 
-  @Field(() => String, { nullable: true })
-  mobile?: string;
+    @Field(() => String, {nullable:false})
+    @Validator.IsEmail()
+    email!: string;
 
-  @Field(() => String, { nullable: true })
-  message?: string;
+    @Field(() => String, {nullable:true})
+    mobile?: string;
 
-  @Field(() => String, { nullable: true })
-  team?: string;
+    @Field(() => String, {nullable:true})
+    message?: string;
+
+    @Field(() => String, {nullable:true})
+    team?: string;
 }

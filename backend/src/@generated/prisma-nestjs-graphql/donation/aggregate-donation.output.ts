@@ -8,18 +8,19 @@ import { DonationMaxAggregate } from './donation-max-aggregate.output';
 
 @ObjectType()
 export class AggregateDonation {
-  @Field(() => DonationCountAggregate, { nullable: true })
-  _count?: DonationCountAggregate;
 
-  @Field(() => DonationAvgAggregate, { nullable: true })
-  _avg?: DonationAvgAggregate;
+    @Field(() => DonationCountAggregate, {nullable:true})
+    _count?: DonationCountAggregate;
 
-  @Field(() => DonationSumAggregate, { nullable: true })
-  _sum?: DonationSumAggregate;
+    @Field(() => DonationAvgAggregate, {nullable:true})
+    _avg?: DonationAvgAggregate;
 
-  @Field(() => DonationMinAggregate, { nullable: true })
-  _min?: DonationMinAggregate;
+    @Field(() => DonationSumAggregate, {nullable:true})
+    _sum?: DonationSumAggregate;
 
-  @Field(() => DonationMaxAggregate, { nullable: true })
-  _max?: DonationMaxAggregate;
+    @Field(() => DonationMinAggregate, {nullable:true})
+    _min?: DonationMinAggregate;
+
+    @Field(() => DonationMaxAggregate, {nullable:true})
+    _max?: DonationMaxAggregate;
 }

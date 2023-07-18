@@ -5,7 +5,8 @@ import { Type } from 'class-transformer';
 
 @ArgsType()
 export class DeleteOneDonationArgs {
-  @Field(() => DonationWhereUniqueInput, { nullable: false })
-  @Type(() => DonationWhereUniqueInput)
-  where!: DonationWhereUniqueInput;
+
+    @Field(() => DonationWhereUniqueInput, {nullable:false})
+    @Type(() => DonationWhereUniqueInput)
+    where!: DonationWhereUniqueInput;
 }
