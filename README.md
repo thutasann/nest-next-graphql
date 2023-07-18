@@ -1,6 +1,6 @@
 # NESTJS NEXTJS GRAPHQL 🚀
 
-Here is the Mini App crafted with
+Here is the Mini FullStack App crafted with
 
 - 🚀 nestjs
 - 🚀 nextjs
