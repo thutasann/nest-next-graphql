@@ -8,7 +8,9 @@ export class DonationsResolver {
   constructor(private readonly donationsService: DonationsService) {}
 
   @Mutation('createDonation')
-  create(@Args('createDonationInput') createDonationInput: CreateDonationInput) {
+  create(
+    @Args('createDonationInput') createDonationInput: CreateDonationInput,
+  ) {
     return this.donationsService.create(createDonationInput);
   }
 
@@ -23,8 +25,13 @@ export class DonationsResolver {
   }
 
   @Mutation('updateDonation')
-  update(@Args('updateDonationInput') updateDonationInput: UpdateDonationInput) {
-    return this.donationsService.update(updateDonationInput.id, updateDonationInput);
+  update(
+    @Args('updateDonationInput') updateDonationInput: UpdateDonationInput,
+  ) {
+    return this.donationsService.update(
+      updateDonationInput.id,
+      updateDonationInput,
+    );
   }
 
   @Mutation('removeDonation')
