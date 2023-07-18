@@ -1,11 +1,11 @@
-import Counter from '@/components/counter';
+import CounterSection from '@/section/CounterSection';
 import Image from 'next/image';
 
-export default function Home() {
+export default async function Hxome() {
   return (
     <main className="flex flex-col items-center justify-center">
       <Image
-        src="/logo.jpeg"
+        src="/logo.png"
         width={100}
         height={100}
         priority
@@ -15,15 +15,16 @@ export default function Home() {
         className="object-cover mt-12"
       />
 
-      <h1 className="text-4xl text-primary mt-2 font-[700] text-center">
-        JOIN THE MOVEMENT
+      <h1 className="text-4xl text-primary mt-2 font-[800] text-center uppercase">
+        Nestjs Nextjs Graphql
       </h1>
       <p className="text-center font-normal text-base mt-3">
-        The team is growing everyday and scroing wins for the planet. <br />{' '}
-        Plant with us and track our progress!
+        This is the Mini Fullstack App along with real-time data crafted with{' '}
+        <br />
+        <b>Nestjs</b>, <b>Nextjs</b>, <b>Graphql</b>, <b>Prisma</b>,{' '}
+        <b>Mongodb</b>
       </p>
-
-      <Counter from={0} to={12323212} />
+      <CounterSection />
     </main>
   );
 }

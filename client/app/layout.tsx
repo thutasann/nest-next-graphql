@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     'This is the mini FullStack app crafted with Nestjs, Nextjs and Graphql',
   icons: {
-    icon: '/logo.jpeg',
+    icon: '/logo.png',
   },
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={IBM.style.fontStyle}>
+      <body className={(IBM.className, ' bg-dark text-light')}>
         <UrqlProvider>
           <CustomChakraProvider>{children}</CustomChakraProvider>
         </UrqlProvider>

@@ -27,7 +27,7 @@ function Counter({ from, to }: ICounter) {
 
   return (
     <section className="mt-6">
-      <div ref={nodeRef} className="text-8xl font-bold" />
+      <div ref={nodeRef} className="text-6xl font-bold" />
     </section>
   );
 }

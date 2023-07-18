@@ -1,7 +1,13 @@
 'use client';
 
 import React from 'react';
-import { createClient, Provider, subscriptionExchange } from 'urql';
+import {
+  createClient,
+  Provider,
+  subscriptionExchange,
+  cacheExchange,
+  fetchExchange,
+} from 'urql';
 import { createClient as createWSClient } from 'graphql-ws';
 
 interface IUrqlProvider {
@@ -15,6 +21,8 @@ const wsClinet = createWSClient({
 const client = createClient({
   url: 'http://localhost:4000/graphql',
   exchanges: [
+    cacheExchange,
+    fetchExchange,
     subscriptionExchange({
       forwardSubscription: (operation: any) => ({
         subscribe: (sink: any) => ({

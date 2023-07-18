@@ -7,3 +7,43 @@ Here is the Mini FullStack App crafted with
 - 🚀 graphql
 - 🚀 prisma
 - 🚀 mongodb
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/thutasann/nest-next-graphql
+```
+
+Go to the project directory
+
+```bash
+  cd nest-next-graphql
+```
+
+Install dependencies
+
+```bash
+  cd client
+  yarn install
+```
+
+```bash
+  cd backend
+  yarn install
+```
+
+Start the Server
+
+```bash
+  cd backend
+  yarn dev
+```
+
+Start the Client
+
+```bash
+  cd frontend
+  yarn dev
+```
