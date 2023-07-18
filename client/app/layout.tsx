@@ -1,18 +1,22 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { IBM_Plex_Sans } from 'next/font/google';
 import CustomChakraProvider from '@/providers/chakra';
+import UrqlProvider from '@/providers/urql';
 
-const inter = Poppins({
-  weight: '500',
+const IBM = IBM_Plex_Sans({
+  weight: '700',
   subsets: ['latin'],
+  display: 'auto',
+  preload: true,
 });
 
 export const metadata: Metadata = {
-  title: 'Nest Next Graphql FullStack App',
-  description: 'This is the Nestjs Nextjs FullStak app',
+  title: 'Nestjs Nextjs Graphql FullStack App',
+  description:
+    'This is the mini FullStack app crafted with Nestjs, Nextjs and Graphql',
   icons: {
-    icon: '/logo.webp',
+    icon: '/logo.jpeg',
   },
 };
 
@@ -23,8 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <CustomChakraProvider>{children}</CustomChakraProvider>
+      <body className={IBM.style.fontStyle}>
+        <UrqlProvider>
+          <CustomChakraProvider>{children}</CustomChakraProvider>
+        </UrqlProvider>
       </body>
     </html>
   );
