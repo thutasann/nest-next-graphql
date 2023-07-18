@@ -1,7 +1,7 @@
 scalar DateTime
 
 type Donation {
-  id: Int!
+  id: String!
   count: Int!
   displayName: String!
   email: String!
@@ -12,7 +12,7 @@ type Donation {
 }
 
 input CreateDonationInput {
-  id: Int!
+  id: String!
   count: Int!
   displayName: String!
   email: String!
@@ -23,16 +23,16 @@ input CreateDonationInput {
 }
 
 input UpdateDonationInput {
-  id: Int!
+  id: String!
 }
 
 type Query {
   donations: [Donation]!
-  donation(id: Int!): Donation
+  donation(id: String!): Donation
 }
 
 type Mutation {
   createDonation(createDonationInput: CreateDonationInput!): Donation!
   updateDonation(updateDonationInput: UpdateDonationInput!): Donation!
-  removeDonation(id: Int!): Donation
+  removeDonation(id: String!): Donation
 }

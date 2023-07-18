@@ -8,7 +8,7 @@
 /* eslint-disable */
 
 export class CreateDonationInput {
-  id: number;
+  id: string;
   count: number;
   displayName: string;
   email: string;
@@ -19,11 +19,11 @@ export class CreateDonationInput {
 }
 
 export class UpdateDonationInput {
-  id: number;
+  id: string;
 }
 
 export class Donation {
-  id: number;
+  id: string;
   count: number;
   displayName: string;
   email: string;
@@ -37,7 +37,7 @@ export abstract class IQuery {
   abstract donations(): Nullable<Donation>[] | Promise<Nullable<Donation>[]>;
 
   abstract donation(
-    id: number,
+    id: string,
   ): Nullable<Donation> | Promise<Nullable<Donation>>;
 }
 
@@ -51,7 +51,7 @@ export abstract class IMutation {
   ): Donation | Promise<Donation>;
 
   abstract removeDonation(
-    id: number,
+    id: string,
   ): Nullable<Donation> | Promise<Nullable<Donation>>;
 }
 
