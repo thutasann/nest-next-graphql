@@ -8,9 +8,12 @@ import { DonationsModule } from './donations/donations.module';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
-      // plugins: [ApolloServerPluginLandingPageLocalDefault()],
       typePaths: ['./**/*.graphql'],
       driver: ApolloDriver,
+      subscriptions: {
+        'graphql-ws': true, // newer one
+        'subscriptions-transport-ws': true,
+      },
     }),
     DonationsModule,
   ],

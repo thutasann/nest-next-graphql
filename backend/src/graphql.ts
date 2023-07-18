@@ -1,4 +1,3 @@
-
 /*
  * -------------------------------------------------------
  * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
@@ -9,50 +8,68 @@
 /* eslint-disable */
 
 export class CreateDonationInput {
-    id?: Nullable<string>;
-    count: number;
-    displayName: string;
-    email: string;
-    mobile: string;
-    team?: Nullable<string>;
-    message?: Nullable<string>;
-    createdAt?: Nullable<DateTime>;
+  id?: Nullable<string>;
+  count: number;
+  displayName: string;
+  email: string;
+  mobile: string;
+  team?: Nullable<string>;
+  message?: Nullable<string>;
+  createdAt?: Nullable<DateTime>;
 }
 
 export class UpdateDonationInput {
-    id: string;
+  id: string;
 }
 
 export class OrderByParams {
-    field?: Nullable<string>;
-    direction?: Nullable<string>;
+  field?: Nullable<string>;
+  direction?: Nullable<string>;
 }
 
 export class Donation {
-    id?: Nullable<string>;
-    count: number;
-    displayName: string;
-    email: string;
-    mobile: string;
-    team?: Nullable<string>;
-    message?: Nullable<string>;
-    createdAt?: Nullable<DateTime>;
+  id?: Nullable<string>;
+  count: number;
+  displayName: string;
+  email: string;
+  mobile: string;
+  team?: Nullable<string>;
+  message?: Nullable<string>;
+  createdAt?: Nullable<DateTime>;
 }
 
 export abstract class IQuery {
-    abstract donations(orderBy?: Nullable<OrderByParams>): Nullable<Donation>[] | Promise<Nullable<Donation>[]>;
+  abstract donations(
+    orderBy?: Nullable<OrderByParams>,
+  ): Nullable<Donation>[] | Promise<Nullable<Donation>[]>;
 
-    abstract donation(id: string): Nullable<Donation> | Promise<Nullable<Donation>>;
+  abstract donation(
+    id: string,
+  ): Nullable<Donation> | Promise<Nullable<Donation>>;
 
-    abstract totalDonations(): number | Promise<number>;
+  abstract totalDonations(): number | Promise<number>;
 }
 
 export abstract class IMutation {
-    abstract createDonation(createDonationInput: CreateDonationInput): Donation | Promise<Donation>;
+  abstract createDonation(
+    createDonationInput: CreateDonationInput,
+  ): Donation | Promise<Donation>;
 
-    abstract updateDonation(updateDonationInput: UpdateDonationInput): Donation | Promise<Donation>;
+  abstract updateDonation(
+    updateDonationInput: UpdateDonationInput,
+  ): Donation | Promise<Donation>;
 
-    abstract removeDonation(id: string): Nullable<Donation> | Promise<Nullable<Donation>>;
+  abstract removeDonation(
+    id: string,
+  ): Nullable<Donation> | Promise<Nullable<Donation>>;
+}
+
+export class Result {
+  total: number;
+}
+
+export abstract class ISubscription {
+  abstract totalUpdated(): Nullable<Result> | Promise<Nullable<Result>>;
 }
 
 export type DateTime = any;
