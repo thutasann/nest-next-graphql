@@ -11,3 +11,16 @@ export const TotalUpdatedQuery = `
         }
     }
 `;
+
+export const DonationsQuery = `
+    query Query($orderBy: OrderByParams){
+        donations(orderBy: $orderBy){
+            count
+            id
+            displayName
+            createdAt
+            message
+            team
+        }
+    }
+`;

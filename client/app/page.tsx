@@ -1,9 +1,10 @@
+import LeaderBoard from '@/components/LeaderBoard';
 import CounterSection from '@/section/CounterSection';
 import Image from 'next/image';
 
 export default async function Hxome() {
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col px-3 items-center justify-center">
       <Image
         src="/logo.png"
         width={100}
@@ -25,6 +26,7 @@ export default async function Hxome() {
         <b>Mongodb</b>
       </p>
       <CounterSection />
+      <LeaderBoard />
     </main>
   );
 }

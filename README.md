@@ -4,9 +4,11 @@ Here is the Mini FullStack App crafted with
 
 - 🚀 nestjs
 - 🚀 nextjs
-- 🚀 graphql
+- 🚀 graphql + grphql subscriptions
 - 🚀 prisma
 - 🚀 mongodb
+- 🚀 tailwindcss
+- 🚀 chakraui
 
 ## Run Locally
 
@@ -44,6 +46,6 @@ Start the Server
 Start the Client
 
 ```bash
-  cd frontend
+  cd client
   yarn dev
 ```

@@ -1,5 +1,6 @@
 'use client';
 
+import { Tooltip } from '@chakra-ui/react';
 import { animate } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
 
@@ -27,7 +28,18 @@ function Counter({ from, to }: ICounter) {
 
   return (
     <section className="mt-6">
-      <div ref={nodeRef} className="text-6xl font-bold" />
+      <Tooltip
+        label="Total Count"
+        position="sticky"
+        placement="right"
+        ml={2}
+        hasArrow
+        fontSize="md"
+        fontWeight="semibold"
+        borderRadius="3"
+      >
+        <div ref={nodeRef} className="text-6xl font-[800]" />
+      </Tooltip>
     </section>
   );
 }
