@@ -7,7 +7,6 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react';
@@ -41,7 +40,7 @@ function FormSection() {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <DonationWizard />
+            <DonationWizard onClose={onClose} />
           </ModalBody>
         </ModalContent>
       </Modal>

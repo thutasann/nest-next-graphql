@@ -50,7 +50,7 @@ function DonationDetailForm({ next, prev }: IDonationDetailForm) {
       onSubmit={handleSubmit}
       validationSchema={detailsSchema}
     >
-      {(formikProps) => {
+      {({ isSubmitting }) => {
         return (
           <Form>
             <div className="form">
@@ -92,6 +92,7 @@ function DonationDetailForm({ next, prev }: IDonationDetailForm) {
                   type="submit"
                   borderRadius="full"
                   onClick={() => {}}
+                  disabled={isSubmitting}
                 >
                   Submit
                 </Button>
