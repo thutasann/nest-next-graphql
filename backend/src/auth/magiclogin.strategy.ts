@@ -22,6 +22,11 @@ export class MagicLoginStrategy extends PassportStrategy(Strategy) {
         );
       },
 
+      /**
+       * Verify
+       * @param payload - Decoded Token
+       * @param callback - Callback Func
+       */
       verify: async (payload, callback) => {
         callback(null, this.validate(payload));
       },
