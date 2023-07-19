@@ -5,6 +5,7 @@ import { UsersModule } from 'src/users/users.module';
 import { MagicLoginStrategy } from './magiclogin.strategy';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
+import { JwtStrategy } from './jwt.strategy';
 
 /**
  * Magic Link Testing Purpose
@@ -14,13 +15,13 @@ import { JwtModule } from '@nestjs/jwt';
     UsersModule,
     PassportModule,
     JwtModule.register({
-      secret: 'this-is-secret',
+      secret: 'this-is-the-secret',
       signOptions: {
         expiresIn: '1h',
       },
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, MagicLoginStrategy],
+  providers: [AuthService, MagicLoginStrategy, JwtStrategy],
 })
 export class AuthModule {}
