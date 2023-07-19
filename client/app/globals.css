@@ -10,3 +10,25 @@ body::-webkit-scrollbar {
   background-color: #0cdfff;
   color: #16181d;
 }
+
+.form {
+  animation: slideInLeft 0.4s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

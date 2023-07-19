@@ -48,7 +48,9 @@ function LeaderBoard() {
           <Radio colorScheme="teal" value="createdAt">
             Most Recent
           </Radio>
-          <Radio value="count">Most Pounds</Radio>
+          <Radio colorScheme="teal" value="count">
+            Most Pounds
+          </Radio>
         </Stack>
       </RadioGroup>
 

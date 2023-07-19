@@ -38,7 +38,7 @@ function Counter({ from, to }: ICounter) {
         fontWeight="semibold"
         borderRadius="3"
       >
-        <div ref={nodeRef} className="text-6xl font-[800]" />
+        <div ref={nodeRef} className="text-6xl font-[800] text-light" />
       </Tooltip>
     </section>
   );

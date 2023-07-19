@@ -1,5 +1,6 @@
 import LeaderBoard from '@/components/LeaderBoard';
 import CounterSection from '@/section/CounterSection';
+import FormSection from '@/section/FormSection';
 import Image from 'next/image';
 
 export default async function Hxome() {
@@ -13,7 +14,7 @@ export default async function Hxome() {
         fetchPriority="high"
         quality={100}
         alt="Logo"
-        className="object-cover mt-12"
+        className="mt-12"
       />
 
       <h1 className="text-4xl text-primary mt-2 font-[800] text-center uppercase">
@@ -25,6 +26,7 @@ export default async function Hxome() {
         <b>Nestjs</b>, <b>Nextjs</b>, <b>Graphql</b>, <b>Prisma</b>,{' '}
         <b>Mongodb</b>
       </p>
+      <FormSection />
       <CounterSection />
       <LeaderBoard />
     </main>
