@@ -36,7 +36,7 @@ function FormSection() {
       >
         <ModalOverlay background="#232936" />
         <ModalContent p={2} sx={{ backgroundColor: '#16181D' }}>
-          <ModalHeader as="header" color="whitesmoke">
+          <ModalHeader className="blur-md" fontSize="3xl" color="whitesmoke">
             Add new
           </ModalHeader>
           <ModalCloseButton />

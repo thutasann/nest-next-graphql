@@ -14,7 +14,7 @@ const options = ['5', '20', '50', '100'];
 
 interface ICountSelection {
   initialCount: string;
-  next: (values: { count: number }) => void;
+  next: (values: any) => void;
   prev: () => void;
 }
 

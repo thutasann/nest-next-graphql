@@ -3,6 +3,7 @@
 import { Box, Button, VStack } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import CountSelection from './CountSelection';
+import DonationDetailForm from './DonationDetailForm';
 
 function DonationWizard() {
   const [step, setStep] = useState(0);
@@ -10,10 +11,16 @@ function DonationWizard() {
     count: 20,
   });
 
-  const next = (values: { count: number } = { count: 0 }) => {
+  const next = (values: any = {}) => {
     const mergedDetails = { ...donationDetails, ...values };
     setDonationDetails(mergedDetails);
-    setStep(step + 1);
+
+    if (step === pages.length - 1) {
+      console.log(mergedDetails);
+    } else {
+      setStep(step + 1);
+      setDonationDetails(mergedDetails);
+    }
   };
 
   const prev = () => {
@@ -26,9 +33,7 @@ function DonationWizard() {
       next={next}
       prev={prev}
     />,
-    <div>
-      Page 2<button onClick={prev}>prev</button>
-    </div>,
+    <DonationDetailForm next={next} prev={prev} />,
   ];
 
   return (

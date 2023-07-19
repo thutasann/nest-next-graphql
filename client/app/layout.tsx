@@ -12,7 +12,7 @@ const IBM = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Nestjs Nextjs Graphql FullStack App',
+  title: 'Nestjs Nextjs Graphql',
   description:
     'This is the mini FullStack app crafted with Nestjs, Nextjs and Graphql',
   icons: {
